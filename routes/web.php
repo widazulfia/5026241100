@@ -26,6 +26,18 @@ Route::get('indextugas5', function () {
     return view('index5');
 });
 
+Route::get('/pertemuan5', function () {
+    return view('pertemuan5');
+});
+
+Route::get('linktreetugas5', function () {
+    return view('linktree5');
+});
+
+Route::get('/linktree5', function () {
+    return view('linktree5');
+});
+
 Route::get('intropert1', function () {
     return view('intro1');
 });
@@ -57,5 +69,3 @@ Route::get('contoh3', function () {
 Route::get('nrpp4', function () {
     return view('5026241100p4');
 });
-
-// kurang linktree.html karena saya takut nanti file bermasalah seperti pada tugas github . io
