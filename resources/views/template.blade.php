@@ -27,10 +27,13 @@
                         <a class="nav-link" href="/bolpen">Bolpen</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/siswa">PR 2</a>
+                        <a class="nav-link" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/nilaikuliah">PR 3</a>
+                        <a class="nav-link" href="/nilaikuliah">Nilai Kuliah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/keranjangbelanja">Keranjang Belanja</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>

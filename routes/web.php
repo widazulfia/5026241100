@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BolpenController;
+use App\Http\Controllers\KeranjangController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -113,3 +114,10 @@ Route::post('/bolpen', [BolpenController::class, 'store'])->name('bolpen.store')
 Route::get('/bolpen/{KodeBolpen}/edit', [BolpenController::class, 'edit'])->name('bolpen.edit');
 Route::put('/bolpen/{KodeBolpen}', [BolpenController::class, 'update'])->name('bolpen.update');
 Route::delete('/bolpen/{KodeBolpen}', [BolpenController::class, 'destroy'])->name('bolpen.destroy');
+
+//CRUD Keranjang Belanja
+Route::get('/keranjangbelanja', [KeranjangController::class, 'index'])->name('keranjangbelanja.index');
+Route::get('/keranjangbelanja/create', [KeranjangController::class, 'create'])->name('keranjangbelanja.create');
+Route::post('/keranjangbelanja', [KeranjangController::class, 'store'])->name('keranjangbelanja.store');
+Route::put('/keranjangbelanja/{ID}', [KeranjangController::class, 'update'])->name('keranjangbelanja.update');
+Route::delete('/keranjangbelanja/{ID}', [KeranjangController::class, 'destroy'])->name('keranjangbelanja.destroy');

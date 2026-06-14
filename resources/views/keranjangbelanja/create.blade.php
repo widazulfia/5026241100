@@ -1,0 +1,54 @@
+@extends('template')
+@section('title', 'Tambah Data Belanja')
+@section('konten')
+<center>
+
+
+        <br />
+        <br />
+
+        <div class="card">
+            <div class="card-header">
+                Tambah Data Belanja
+            </div>
+
+            <div class="card-body">
+                <form action="{{ route('keranjangbelanja.store') }}" method="POST">
+                    @csrf
+
+                    <div class="row mb-3">
+                        <label for="KodeBarang" class="col-sm-2 col-form-label">Kode Barang</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="KodeBarang" id="KodeBarang" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="Jumlah" class="col-sm-2 col-form-label">Jumlah Pembelian</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="Jumlah" id="Jumlah" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="Harga" class="col-sm-2 col-form-label">Harga per Item</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="Harga" id="Harga" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <input type="submit" value="Simpan Data" class="btn btn-primary">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <br />
+        <br />
+        <a href="/keranjangbelanja" class="btn btn-info"> Kembali</a>
+    </center>
+
+    @endsection
