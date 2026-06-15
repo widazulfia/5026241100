@@ -7,6 +7,7 @@ use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BolpenController;
 use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\TagihanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -121,3 +122,8 @@ Route::get('/keranjangbelanja/create', [KeranjangController::class, 'create'])->
 Route::post('/keranjangbelanja', [KeranjangController::class, 'store'])->name('keranjangbelanja.store');
 Route::put('/keranjangbelanja/{ID}', [KeranjangController::class, 'update'])->name('keranjangbelanja.update');
 Route::delete('/keranjangbelanja/{ID}', [KeranjangController::class, 'destroy'])->name('keranjangbelanja.destroy');
+
+// Route EAS (tagihan air)
+Route::get('/eas', [TagihanController::class, 'index'])->name('tagihan_air.index');
+Route::get('/eas/create', [TagihanController::class, 'create'])->name('tagihan_air.create');
+Route::post('/eas', [TagihanController::class, 'store'])->name('tagihan_air.store');
